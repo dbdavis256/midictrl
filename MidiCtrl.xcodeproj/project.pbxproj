@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		870692AF29B532B6006C975F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692AE29B532B6006C975F /* main.m */; };
 		870692B729B5330C006C975F /* MIDIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692B629B5330C006C975F /* MIDIWrapper.m */; };
+		879E95E929B5404700D1CB62 /* MidiInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 879E95E829B5404700D1CB62 /* MidiInputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		870692B529B53302006C975F /* MIDIWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIDIWrapper.h; sourceTree = "<group>"; };
 		870692B629B5330C006C975F /* MIDIWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIWrapper.m; sourceTree = "<group>"; };
 		870692B829B5358D006C975F /* MIDIReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIDIReceiver.h; sourceTree = "<group>"; };
+		879E95E729B5403F00D1CB62 /* MidiInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidiInputHandler.h; sourceTree = "<group>"; };
+		879E95E829B5404700D1CB62 /* MidiInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiInputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 		870692AD29B532B6006C975F /* MidiCtrl */ = {
 			isa = PBXGroup;
 			children = (
+				879E95E729B5403F00D1CB62 /* MidiInputHandler.h */,
+				879E95E829B5404700D1CB62 /* MidiInputHandler.m */,
 				870692B829B5358D006C975F /* MIDIReceiver.h */,
 				870692B629B5330C006C975F /* MIDIWrapper.m */,
 				870692B529B53302006C975F /* MIDIWrapper.h */,
@@ -128,6 +133,7 @@
 			files = (
 				870692B729B5330C006C975F /* MIDIWrapper.m in Sources */,
 				870692AF29B532B6006C975F /* main.m in Sources */,
+				879E95E929B5404700D1CB62 /* MidiInputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
