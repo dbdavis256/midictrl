@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MIDIWrapper.h"
 #import "MidiInputHandler.h"
 #import "MidiInputHandlerNov.h"
 
@@ -15,6 +14,7 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         // Connect a novation launchpad X to a MidiInputHandlerNov object for light displays
+        // first set launchpad to programmer mode
         MidiInputHandlerNov *novInputHandler = [[MidiInputHandlerNov alloc] init];
         
         // Connect a Boss RC-500 with a Uno MIDI interface to a MidiInputHandler object for mouse clicks
