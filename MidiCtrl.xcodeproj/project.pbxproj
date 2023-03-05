@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		870692AF29B532B6006C975F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692AE29B532B6006C975F /* main.m */; };
+		870692B729B5330C006C975F /* MIDIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692B629B5330C006C975F /* MIDIWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		870692AB29B532B6006C975F /* MidiCtrl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MidiCtrl; sourceTree = BUILT_PRODUCTS_DIR; };
 		870692AE29B532B6006C975F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		870692B529B53302006C975F /* MIDIWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIDIWrapper.h; sourceTree = "<group>"; };
+		870692B629B5330C006C975F /* MIDIWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIWrapper.m; sourceTree = "<group>"; };
+		870692B829B5358D006C975F /* MIDIReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIDIReceiver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,9 @@
 		870692AD29B532B6006C975F /* MidiCtrl */ = {
 			isa = PBXGroup;
 			children = (
+				870692B829B5358D006C975F /* MIDIReceiver.h */,
+				870692B629B5330C006C975F /* MIDIWrapper.m */,
+				870692B529B53302006C975F /* MIDIWrapper.h */,
 				870692AE29B532B6006C975F /* main.m */,
 			);
 			path = MidiCtrl;
@@ -119,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870692B729B5330C006C975F /* MIDIWrapper.m in Sources */,
 				870692AF29B532B6006C975F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +246,7 @@
 		870692B329B532B6006C975F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU4SJ6T2FL;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -248,6 +257,7 @@
 		870692B429B532B6006C975F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU4SJ6T2FL;
 				ENABLE_HARDENED_RUNTIME = YES;
