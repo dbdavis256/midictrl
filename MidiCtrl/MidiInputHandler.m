@@ -18,6 +18,12 @@ CGPoint getMouseLoc() {
 
 -(id)init {
     if (self = [super init]) {
+        midi = [[MIDIWrapper alloc] initWithClientName:@"Boss Client" inPort:@"Input Port2" outPort:@"Output Port2"];
+        pedal = [midi getDevice:@"USB Uno MIDI Interface" ];
+        //NSLog(@"%@", [midi2 getInformationAboutDevice: pedal]);
+        [midi connectDevice: pedal deviceIndex:0];
+        [midi setReceiver: self];
+        
         mouseForwardLoc = CGPointMake(0,0);
         mouseBackLoc = CGPointMake(0,0);
     }

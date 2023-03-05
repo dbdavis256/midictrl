@@ -76,7 +76,7 @@ void MIDIOnInput (
 
 // Senders
 
-- (void)sendData: (NSArray *)data withDevice:(MIDIDeviceRef)device entityIndex:(int)index; {
+- (void)sendData: (NSArray *)data withDevice:(MIDIDeviceRef)device deviceIndex:(int)index; {
     Byte *array = malloc(sizeof(Byte) * [data count]);
     for (int i = 0; i < [data count]; i++) {
         NSNumber *number = [data objectAtIndex:i];
@@ -100,8 +100,8 @@ void MIDIOnInput (
 
 // Connection
 
-- (void)connectDevice: (MIDIDeviceRef)device {
-    MIDIEndpointRef entity = MIDIDeviceGetEntity(device, 0);
+- (void)connectDevice: (MIDIDeviceRef)device deviceIndex:(int)index; {
+    MIDIEndpointRef entity = MIDIDeviceGetEntity(device, index);
     MIDIEndpointRef source = MIDIEntityGetSource(entity, 0);
     
     MIDIPortConnectSource(inputPort, source, NULL);

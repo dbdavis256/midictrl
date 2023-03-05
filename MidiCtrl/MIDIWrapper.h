@@ -41,9 +41,9 @@ void MIDIOnInput (
 }
 
 - (id)initWithClientName: (NSString *)clientName inPort: (NSString *)iPort outPort: (NSString *)oPort;
-- (void)sendData:  (NSArray *)data withDevice: (MIDIDeviceRef)device entityIndex:(int)index;
+- (void)sendData:  (NSArray *)data withDevice: (MIDIDeviceRef)device deviceIndex:(int)index;
 - (void)setReceiver: (id <MIDIReceiver>)reciever;
-- (void)connectDevice: (MIDIDeviceRef)device;
+- (void)connectDevice: (MIDIDeviceRef)device deviceIndex:(int)index;
 
 - (MIDIObjectRef)getDevice: (NSString *)deviceName;
 - (NSDictionary *)getDeviceList;

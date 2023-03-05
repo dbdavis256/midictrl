@@ -10,6 +10,7 @@
 		870692AF29B532B6006C975F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692AE29B532B6006C975F /* main.m */; };
 		870692B729B5330C006C975F /* MIDIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 870692B629B5330C006C975F /* MIDIWrapper.m */; };
 		879E95E929B5404700D1CB62 /* MidiInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 879E95E829B5404700D1CB62 /* MidiInputHandler.m */; };
+		87F7627E29B5487D0043B558 /* MidiInputHandlerNov.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F7627D29B5487D0043B558 /* MidiInputHandlerNov.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		870692B829B5358D006C975F /* MIDIReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIDIReceiver.h; sourceTree = "<group>"; };
 		879E95E729B5403F00D1CB62 /* MidiInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidiInputHandler.h; sourceTree = "<group>"; };
 		879E95E829B5404700D1CB62 /* MidiInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiInputHandler.m; sourceTree = "<group>"; };
+		87F7627C29B5487D0043B558 /* MidiInputHandlerNov.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiInputHandlerNov.h; sourceTree = "<group>"; };
+		87F7627D29B5487D0043B558 /* MidiInputHandlerNov.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiInputHandlerNov.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		870692AD29B532B6006C975F /* MidiCtrl */ = {
 			isa = PBXGroup;
 			children = (
+				87F7627C29B5487D0043B558 /* MidiInputHandlerNov.h */,
+				87F7627D29B5487D0043B558 /* MidiInputHandlerNov.m */,
 				879E95E729B5403F00D1CB62 /* MidiInputHandler.h */,
 				879E95E829B5404700D1CB62 /* MidiInputHandler.m */,
 				870692B829B5358D006C975F /* MIDIReceiver.h */,
@@ -131,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F7627E29B5487D0043B558 /* MidiInputHandlerNov.m in Sources */,
 				870692B729B5330C006C975F /* MIDIWrapper.m in Sources */,
 				870692AF29B532B6006C975F /* main.m in Sources */,
 				879E95E929B5404700D1CB62 /* MidiInputHandler.m in Sources */,

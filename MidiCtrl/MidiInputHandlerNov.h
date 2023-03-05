@@ -11,12 +11,9 @@
 #import "MIDIReceiver.h"
 #import "MIDIWrapper.h"
 
-@interface MidiInputHandler : NSObject <MIDIReceiver> {
+@interface MidiInputHandlerNov : NSObject <MIDIReceiver> {
     MIDIWrapper *midi;
-    MIDIDeviceRef pedal;
-    
-    CGPoint mouseForwardLoc;
-    CGPoint mouseBackLoc;
+    MIDIDeviceRef launchpadX;
 }
 
 - (void)receiveMIDIInput: (NSArray *)packet;

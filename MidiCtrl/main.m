@@ -8,29 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "MIDIWrapper.h"
 #import "MidiInputHandler.h"
+#import "MidiInputHandlerNov.h"
 
 int main(int argc, const char * argv[]) {
     NSRunLoop *runLoop;
     
     @autoreleasepool {
-        MIDIWrapper *midi = [[MIDIWrapper alloc] initWithClientName:@"Client" inPort:@"Input Port" outPort:@"Output Port"];
+        // Connect a novation launchpad X to a MidiInputHandlerNov object for light displays
+        MidiInputHandlerNov *novInputHandler = [[MidiInputHandlerNov alloc] init];
         
-        NSLog(@"%@", [midi getDeviceList]);
-        
-        MIDIDeviceRef launchpadX = [midi getDevice:@"Launchpad X" ];
-        NSLog(@"%@", [midi getInformationAboutDevice: launchpadX]);
-        
-        NSArray *command = [NSArray arrayWithObjects:[NSNumber numberWithUnsignedInt:0x90], [NSNumber numberWithUnsignedInt:0x0B], [NSNumber numberWithUnsignedInt:0x05],nil];
-        
-        [midi sendData: command withDevice: launchpadX entityIndex:1];
-        
-        MIDIDeviceRef pedal = [midi getDevice:@"USB Uno MIDI Interface" ];
-        NSLog(@"%@", [midi getInformationAboutDevice: pedal]);
-        
-        [midi connectDevice: pedal];
-        
+        // Connect a Boss RC-500 with a Uno MIDI interface to a MidiInputHandler object for mouse clicks
         MidiInputHandler *inputHandler = [[MidiInputHandler alloc] init];
-        [midi setReceiver: inputHandler];
         
         runLoop = [NSRunLoop currentRunLoop];
         while((([runLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:2]])));
